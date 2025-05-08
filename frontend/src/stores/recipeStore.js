@@ -20,7 +20,7 @@ export const useRecipeStore = defineStore('recipe', {
                 const res = await api.get('/recipes')
                 this.recipes = res.data
             } catch (err) {
-                console.error('获取食谱失败:', err)
+                console.error('Failed to get recipes:', err)
             }
         },
 

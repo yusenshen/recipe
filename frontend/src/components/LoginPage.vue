@@ -64,13 +64,18 @@ const handleRegister = async () => {
 
 <style scoped>
 .login-container {
-	max-width: 400px;
+	max-width: 450px;
 	margin: 100px auto;
 	text-align: center;
 	padding: 40px;
 }
 
-.username-input,
+.username-input {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+	
 .password-input {
 	margin-bottom: 20px;
 	width: 100%;

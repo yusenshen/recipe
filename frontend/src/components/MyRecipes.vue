@@ -35,7 +35,9 @@ onMounted(() => {
 
 // filter recipes by current user
 const myRecipes = computed(() =>
-  store.recipes.filter(r => r.creatorName === store.currentUser)
+  Array.isArray(store.recipes)
+    ? store.recipes.filter(r => r.creatorName === store.currentUser)
+    : []
 )
 
 // back to homepage

@@ -46,7 +46,6 @@ const recipes = computed(() =>
 
 // fetch recipes on mount
 onMounted(() => {
-	console.log("RecipeList.vue mounted")
 	store.fetchRecipes()
 })
 

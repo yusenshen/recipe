@@ -40,7 +40,9 @@ import { ref, computed, onMounted } from 'vue'
 import { useRecipeStore } from '../stores/recipeStore'
 
 const store = useRecipeStore()
-const recipes = computed(() => store.recipes)
+const recipes = computed(() =>
+  Array.isArray(store.recipes) ? store.recipes : []
+)
 
 // fetch recipes on mount
 onMounted(() => {

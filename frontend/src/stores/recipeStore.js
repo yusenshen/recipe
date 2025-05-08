@@ -19,7 +19,6 @@ export const useRecipeStore = defineStore('recipe', {
             try {
                 const res = await api.get('/recipes')
                 this.recipes = res.data
-                console.log("Fetched recipes:", res.data)
             } catch (err) {
                 console.error('Failed to get recipes:', err)
             }

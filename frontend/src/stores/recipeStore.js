@@ -17,11 +17,7 @@ export const useRecipeStore = defineStore('recipe', {
     actions: {
         async fetchRecipes() {
             try {
-                console.log("fetchRecipes called")
                 const res = await api.get('/recipes')
-                console.log("res =", res)
-                console.log("res.data =", res.data)
-                console.log("typeof res.data =", typeof res.data)
                 this.recipes = res.data
                 
             } catch (err) {
